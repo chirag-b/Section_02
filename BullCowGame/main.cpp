@@ -9,7 +9,9 @@
 #include <iostream>
 #include <string>
 #include "FBullCowGame.h"
+#pragma once
 
+// to make syntax Unreal friendly
 using FText = std::string;
 using int32 = int;
 
@@ -20,7 +22,7 @@ bool AskToPlayAgain();
 void PrintGameSummary(bool);
 
 
-FBullCowGame BCGame; // instantiate a new game
+FBullCowGame BCGame; // instantiate a new game, which we re-use across plays
 
 // entry into the game
 int main()
@@ -62,7 +64,7 @@ void PrintIntro()
 	return;
 }
 
-
+// plays a single game to completion
 void PlayGame()
 {
 	BCGame.Reset();
